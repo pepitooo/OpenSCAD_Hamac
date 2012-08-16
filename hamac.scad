@@ -16,7 +16,7 @@ module wood_bar(height, width, length) {
 }
 
 
-module armature() {
+module frame_side() {
 	/* base */
 	translate(v=[-BASE_LENGTH/2,0,0]) {
 		wood_bar(WOOD_HEIGHT, WOOD_WIDTH, BASE_LENGTH);
@@ -51,12 +51,12 @@ module armature() {
 module hamac() {
 	translate(v=[0,285,0]) {
 		rotate(a=[20,0,0]) {
-			armature();
+			frame_side();
 		}
 	}
 	translate(v=[0,-285,0]) {
 		rotate(a=[20,0,180]) {
-			armature();
+			frame_side();
 		}
 	}
 	translate(v=[BASE_LENGTH / 2 - 280,-BASE_SUPPORT_LENGHT / 2,30]) {
